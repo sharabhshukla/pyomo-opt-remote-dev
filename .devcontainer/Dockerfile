@@ -6,5 +6,5 @@ FROM mcr.microsoft.com/devcontainers/anaconda:0-3
 RUN conda create -n optenv python=3.9 -y
 SHELL ["conda", "run", "-n", "optenv", "/bin/bash", "-c"]
 RUN conda install -c conda-forge pyscipopt
-COPY requirements.txt requirements.txt
+COPY .devcontainer/requirements.txt requirements.txt
 RUN pip install -r requirements.txt
